@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vending Machine</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene
+      fog="color: #023e8a; density: 0.46025; far: 8.24; near: 0; type: exponential"
+      background="color: #ECECEC"
+    >
+      <a-assets>
+        <a-asset-item id="floor" src="./img/floor-tile.glb"></a-asset-item>
+        <a-asset-item
+          id="vending"
+          src="./img/vending-machine.glb"
+        ></a-asset-item>
+        <a-asset-item id="can" src="./img/soda.glb"></a-asset-item>
+      </a-assets>
+      <a-sky color="#0077b6"></a-sky>
+
+      <!-- Canettes -->
+      <a-entity
+        gltf-model="./img/soda.glb"
+        scale="0.25 0.25 0.25"
+        position="-0.251 0.417 1.926"
+        rotation="0 0 60"
+        animation="property: rotation; to: 0 360 60; loop: true; dur: 10000; easing: linear"
+      ></a-entity>
+      <a-entity
+        gltf-model="./img/soda.glb"
+        scale="0.25 0.25 0.25"
+        position="-0.251 -0.048 1.497"
+        rotation="0 0 100"
+      ></a-entity>
+      <a-entity
+        gltf-model="./img/soda.glb"
+        scale="0.25 0.25 0.25"
+        position="-0.768 0.939 2.292"
+        rotation="0 0 140"
+      ></a-entity>
+      <a-entity
+        gltf-model="./img/soda.glb"
+        scale="0.25 0.25 0.25"
+        position="-0.998 0.889 2.925"
+        rotation="0 80 20"
+      ></a-entity>
+      <a-entity
+        gltf-model="./img/soda.glb"
+        scale="0.25 0.25 0.25"
+        position="-0.95 1.638 3.483"
+        rotation="50 -100 -40"
+      ></a-entity>
+
+      <!-- Sol -->
+      <a-entity
+        gltf-model="./img/floor-tile.glb"
+        scale="2 1 2"
+        position="0 -0.8 0"
+        rotation="0 55 0"
+      ></a-entity>
+
+      <!-- Distrib -->
+      <a-entity>
+        <a-entity
+          gltf-model="./img/vending-machine.glb"
+          rotation="0 145 0"
+          position="0 1.2 1"
+          scale="1.2 1.2 1.2"
+          class="clickable"
+          cursor-listener=""
+        >
+          <a-entity
+            geometry="box"
+            material="emissive: #48cae4; emissiveIntensity: 9"
+            position="-0.46 0.58 -0.15"
+            scale="0.2 0.1 0.1"
+          >
+          </a-entity>
+          <a-entity
+            geometry="box"
+            material="emissive: blue; emissiveIntensity: 9"
+            position="-0.46 0.18 -0.15"
+            scale="0.2 0.1 0.1"
+          >
+          </a-entity>
+          <a-entity
+            geometry="box"
+            material="emissive: #48cae4; emissiveIntensity: 9"
+            position="0.1 -0.94 -0.12"
+            scale="0.33 0.15 0.1"
+          >
+          </a-entity>
+          <a-entity
+            geometry="box"
+            material="emissive: #48cae4; emissiveIntensity: 9"
+            position="-0.62 -1.1 0.3"
+            scale="0.1 0.4 0.4"
+          >
+          </a-entity>
+          <a-entity
+            geometry="box"
+            material="emissive: #48cae4; emissiveIntensity: 9"
+            position="0.43 0.22 -0.12"
+            scale="0.05 0.98 0.1"
+          >
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <!-- Lights -->
+      <a-entity
+        light="color: #14213d; intensity: 0.5"
+        position="0 10 -50"
+        target="#vending"
+      ></a-entity>
+      <a-entity
+        light="color: #023e8a; type: ambient"
+        position="0 10 0"
+      ></a-entity>
+
+      <!-- CAMERA & manettes -->
+      <a-entity>
+        <a-camera
+          position="0 1.6 4"
+          rotation="0 -45 0"
+          look-controls="enabled: true"
+          wasd-controls="enabled: true"
+        >
+        </a-camera>
+      </a-entity>
+
+      <!-- Sound -->
+      <!-- <a-sound src="./sound/merrick.mp3" loop="true" autoplay="true"></a-sound> -->
+    </a-scene>
+  </body>
+</html>
