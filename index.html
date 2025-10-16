@@ -109,63 +109,69 @@
     </style>
   </head>
   <body>
-    <a-scene fog="type: linear; color: #AAA; near: 5; far: 20">
-      <a-assets>
-        <a-asset-item id="plant" src="assets/plant.glb"></a-asset-item>
-      </a-assets>
-
-      <a-entity
-        light="type: point; color: white; intensity: 0.7"
-        position="0 2 0"
-      ></a-entity>
-
-      <a-entity gltf-model="#plant" position="2 0 -3" scale="1 1 1"></a-entity>
-
-      <a-entity>
-        <a-box
-          position="0.00879 2.92255 -4.76049"
-          rotation="0 45 0"
-          color="#4CC3D9"
-        ></a-box>
-        <a-box
-          position="-0.00832 2.92255 -4.48699"
-          rotation="0 45 0"
-          color="#4CC3D9"
-        ></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder
-          position="1 0.75 -3"
-          radius="0.5"
-          height="1.5"
-          color="#FFC65D"
-        ></a-cylinder>
-        <a-plane
-          position="0 0 -4"
-          rotation="-90 0 0"
-          width="4"
-          height="4"
-          color="#7BC8A4"
-        ></a-plane>
-      </a-entity>
-      <a-entity
-        geometry="primitive: sphere; radius:.25"
-        material="color: #7BC8A4; shader: flat; castShadow: true"
-        light="type: point; color: #fff; intensity: 2; distance: 20; decay: 2"
-        position="-5 2.5 0"
-      >
-      </a-entity>
-
-      <a-sky color="#ECECEC"></a-sky>
-      <a-entity id="cameraRig" position="0 0 5">
-        <a-camera
-          position="0 1.6 0"
-          rotation="0 90 0"
-          wasd-controls-enabled
-          look-controls-enabled
-        >
-          <a-cursor color="#FF0000"></a-cursor>
-        </a-camera>
-      </a-entity>
-    </a-scene>
+    <div>
+      <h1>A-Frame VR World Carl BURTON like</h1>
+      <div class="container">
+        <nav class="nav">
+          <ul class="cards">
+            <li>
+              <a class="card" href="https://alexouuuuuuuuuuu.github.io/VRtest/"
+                >ALEXIS</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://melihsati.github.io/3D/">MELI</a>
+            </li>
+            <li>
+              <a class="card" href="https://funnyrakoon.github.io/scene3D/"
+                >MATT</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://dixydres.github.io/Projet-3D/"
+                >JEAN-JOSÉ</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://armand-vincent.github.io/Scene3D/"
+                >VINCENT</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://yooeslie.github.io/Projet-3D/"
+                >ELOÏSE</a
+              >
+            </li>
+            <li>
+              <a
+                class="card"
+                href="https://mateomougenot.github.io/dev-VR-Mateo/"
+                >MATEO</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://mel-lpz.github.io/Mel-Projet3D"
+                >MEL</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://loukkka.github.io/ProjetVirtual/"
+                >LOUKA</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://kelian83.github.io/projet-vr/"
+                >KELIAN</a
+              >
+            </li>
+            <li>
+              <a class="card" href="https://nath-dejean.github.io/BUT3-3D/"
+                >NATHAN</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </body>
 </html>
